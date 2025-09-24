@@ -18,6 +18,9 @@
 notebooks/*.pkl
 notebooks/data/*
 docs/source/getting_started/notebooks/inputs
+!webinar/
+!webinar/assets/
+!webinar/layouts/
 
 ### Database ###
 *.accdb
