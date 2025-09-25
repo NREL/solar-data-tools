@@ -1,6 +1,6 @@
 # Solar Data Tools Webinar
 
-Presented 25 September 2025*
+*Presented 25 September 2025*
 
 This directory contain the marimo notebook and presentation given at the Solar Data Tools webinar, hosted by NREL on 9/25/25.
 
@@ -24,3 +24,4 @@ To view the presentation without the code blocks, run:
 ```
 marimo run SDT_demo.py
 ```
+
