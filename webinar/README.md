@@ -6,7 +6,7 @@ This directory contain the marimo notebook and presentation given at the Solar D
 
 ## Instructions
 
-Starting in a fresh Python 3.12 virtual environment, install the requirements:
+Starting in a fresh Python 3.12 virtual environment, install the requirements file in this directory (`solar-data-tools/webinar/requirements.txt`). From this directory, run:
 
 ```
 pip install -r requirements.txt
@@ -24,4 +24,5 @@ To view the presentation without the code blocks, run:
 ```
 marimo run SDT_demo.py
 ```
+
 
