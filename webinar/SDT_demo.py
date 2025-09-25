@@ -392,7 +392,7 @@ def _(mo):
 
 @app.function
 def fit_clearsky(dh):
-    dh.fit_statistical_clear_sky_model(solver="MOSEK", verbose=False)
+    dh.fit_statistical_clear_sky_model(verbose=False)
     return dh
 
 
