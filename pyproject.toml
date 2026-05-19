@@ -65,6 +65,12 @@ docs = [
     "nbsphinx_link",
     "docutils<0.22"
 ]
+dev = [
+    "ruff==0.9.6",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+]
 mosek = [
     "mosek"
 ]

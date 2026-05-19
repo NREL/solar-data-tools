@@ -220,10 +220,10 @@ Tools uses [CLARABEL](https://clarabel.org/stable/) as the solver all signal dec
 to specify another solver (such as MOSEK), just pass the keyword argument `solver` to `DataHandler.pipeline` with the solver of choice.
 
 ```python
+import pandas as pd
 from solardatatools import DataHandler
-from solardatatools.dataio import get_pvdaq_data
 
-pv_system_data = get_pvdaq_data(sysid=35, api_key='DEMO_KEY', year=[2011, 2012, 2013])
+pv_system_data = pd.read_csv('path/to/your/data.csv', index_col=0, parse_dates=True)
 
 dh = DataHandler(pv_system_data)
 dh.run_pipeline(power_col='dc_power')

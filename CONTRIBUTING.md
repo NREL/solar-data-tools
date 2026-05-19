@@ -48,6 +48,10 @@ Python virtual environments. We recommend using `conda`.
     ```console
     $ pip install -e ".[docs]"
     ```
+   Or for development (linting, testing):
+    ```console
+    $ pip install -e ".[dev]"
+    ```
 5. Create a branch for local development and make your changes:
 
     ```console
