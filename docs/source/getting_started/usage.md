@@ -8,10 +8,10 @@ The data should be in the form of a pandas DataFrame with a datetime index and a
 (or the user must set the `datetime_col` kwarg.) The data is recommended to be in the local timezone of the PV system.
 
 ```python
+import pandas as pd
 from solardatatools import DataHandler
-from solardatatools.dataio import get_pvdaq_data
 
-pv_system_data = get_pvdaq_data(sysid=35, api_key='DEMO_KEY', year=[2011, 2012, 2013])
+pv_system_data = pd.read_csv('path/to/your/data.csv', index_col=0, parse_dates=True)
 
 dh = DataHandler(pv_system_data)
 dh.run_pipeline(power_col='dc_power')

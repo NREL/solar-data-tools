@@ -50,7 +50,7 @@ The DataHandler object is now ready to be used for data processing and analysis.
 Timeseries data is often in wide-form, where you have for example a DataFrame that has a timestamp
 column and one or more data columns. That's what the DataHandler typically expects. However,
 it also can take data in long-form, such as for example what we have in the Redshift data where some sites
-have more than one inverter (see the "Data I/O functions" section below). In this case, you will
+have more than one inverter. In this case, you will
 want to instantiate the DataHandler object with the `convert_to_ts` flag set to True:
 
 ```python
@@ -190,40 +190,12 @@ method and provide a GMT offset value by passing it to the method. After that, y
 four estimation methods. A demo of this feature can be found in the [tutorial](getting_started/notebooks/tutorial.ipynb)
 in cells 13-15.
 
-### Data I/O functions
+### Loading data
 
-The `dataio` module in Solar Data Tools includes a number of functions to pull data from various sources.
-These functions are useful for loading data into a DataFrame that can be used with the `DataHandler` class.
-The available functions are:
-
-| Method                            | Description                                                                    |
-|-----------------------------------|--------------------------------------------------------------------------------|
-| dataio.get_pvdaq_data      | Queries one or more years of raw PV system data from NREL's PVDAQ data service |
-| dataio.load_constellation_data | Loads constellation data from a specified location                             |
-| dataio.load_redshift_data  | Queries a SunPower dataset by site id and returns a Pandas DataFrame           |
-| dataio.load_pvo_data    | Loads NREL data from private S3 bucket (for use by the SLAC team only)         |
-
-
-The PVDAQ database is a public database of solar power data that can be accessed by anyone. The system
-locations that can be accessed are shown on [this interactive map](https://openei.org/wiki/PVDAQ/PVData_Map).
-You can use the "DEMO_KEY" for querying the data, but you can also get your own API key by
-registering [here](https://data.openei.org/submissions/4568).
-An example usage for this function for system ID 34 is shown below:
-```python
-df = get_pvdaq_data(sysid=34, year=range(2011, 2015), api_key='DEMO_KEY')
-```
-
-To use the `load_redshift_data` function, you will need to
-request an API key by registering at [https://pvdb.slacgismo.org](https://pvdb.slacgismo.org) and emailing
-slacgismotutorials@gmail.com with your information and use case. To query the data, you also must
-provide a site ID and a sensor number (0, 1, 2 ...). An example usage is shown below:
+You can load data into a DataFrame using standard pandas functions:
 
 ```python
-query = {
-    'siteid': 'TABJC1027159',
-    'api_key': YOUR_API_KEY,
-    'sensor': 0
-}
+import pandas as pd
 
-df = load_redshift_data(**query)
+df = pd.read_csv('path/to/your/data.csv', index_col=0, parse_dates=True)
 ```

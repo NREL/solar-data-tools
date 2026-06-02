@@ -48,6 +48,10 @@ Python virtual environments. We recommend using `conda`.
     ```console
     $ pip install -e ".[docs]"
     ```
+   Or for development (linting, testing):
+    ```console
+    $ pip install -e ".[dev]"
+    ```
 5. Create a branch for local development and make your changes:
 
     ```console
@@ -63,7 +67,7 @@ Python virtual environments. We recommend using `conda`.
 
    This will create a local copy of the documentation in `_build/html/index.html`.
 
-7. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests. One of the automated checks for each PR is linting with ruff and pre-commit hooks and will fail otherwise. You can install pre-commit with `pip install pre-commit` and then run `pre-commit install` in the root of the repository. When you commit your changes, the pre-commit hooks will run automatically.
+7. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests. One of the automated checks for each PR is linting with ruff and pre-commit hooks and will fail otherwise. If you installed with the `.[dev]` extra (step 4), `pre-commit` and `ruff` are already included — just run `pre-commit install` in the root of the repository. When you commit your changes, the pre-commit hooks will run automatically.
 
 8. Commit and push your changes to your fork, and open a pull request.
 

@@ -48,27 +48,7 @@ Below are detailed descriptions of the DataPlugs available for use with the SDT 
 data_plug.get_data(("filename",))
 ```
 
-### 2. PVDAQPlug (dataplugs/pvdaq_plug.py)
-
-- **Description**: Retrieving and cleaning solar data from the PVDAQ database
-- **Initialization**:
-`api_key`: Your API key for accessing the PVDAQ data.
-- **`get_data` Tuple input**: Expects a tuple containing the site ID (integer) and the year (integer) for which data is to be retrieved. Example to call get_data method:
-```python
-data_plug.get_data((site_id, year))
-```
-
-
-### 3. PVDBPlug (dataplugs/pvdb_plug.py)
-
-- **Description**: Retrieving and cleaning solar data from the PVDB (Redshift) database
-- **Initialization**: No input but assumes the API key is set as an environment variable REDSHIFT_API_KEY.
-- **`get_data` Tuple input**: Expects a tuple containing the site ID (string) and the sensor type (integer), identifying the specific dataset to be retrieved. Example to call get_data method:
-```python
-data_plug.get_data(("site_id", sensor_type))
-```
-
-### 4. S3Bucket DataPlug
+### 2. S3Bucket DataPlug
 
 - **Description**: Retrieving and cleaning solar data from S3 Bucket. And provides a function to get the full key list inside the given bucket name.
 - **Initialization**:
