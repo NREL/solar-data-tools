@@ -31,7 +31,7 @@ class TestCalculateLongitude(unittest.TestCase):
         # gmt_offset
         gmt_offset = -5
 
-        # Expected Longitude Output is generated in tests/fixtures/longitude/longitude_fitting_and_calculation_test_data_creator.ipynb
+        # Expected Longitude Output is generated in archival/tests/fixtures/longitude/longitude_fitting_and_calculation_test_data_creator.ipynb
         expected_output = -77.10636729272031
 
         actual_output = calculate_longitude(eot_duffie, solarnoon, days, gmt_offset)
