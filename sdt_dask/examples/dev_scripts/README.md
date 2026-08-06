@@ -5,5 +5,5 @@ We provide them here as a reference for anyone that might find them useful to re
 own scripts to run the tool.
 
 > **Note:** `rev_far_pvdb_dask.py`, which depended on the removed `PVDBPlug`, is **archival
-> only** and has been moved to `archival/sdt_dask/examples/dev_scripts/`. See
-> `archival/README.md` for details.
+> only** and has been moved to `archival/sdt_dask/examples/dev_scripts/`. See the README
+> there for details.
