@@ -13,8 +13,8 @@ class AzureClient(ClientPlug):
     Dask Client is initialized using the AzureVMCluster
 
     Used in:
-        sdt_dask/examples/rev_far_base_dask.py
-        sdt_dask/examples/rev_far_pvdb_dask.py
+        sdt_dask/examples/dev_scripts/rev_far_base_dask.py
+        archival/sdt_dask/examples/dev_scripts/rev_far_pvdb_dask.py (archival)
 
     :param workers: The number of workers to initialize the AzureVMCluster,
         defaults to 5

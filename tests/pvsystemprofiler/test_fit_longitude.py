@@ -32,7 +32,7 @@ class TestFitLongitude(unittest.TestCase):
         # loss
         loss = "l2"
 
-        # Expected Longitude Output is generated in tests/fixtures/longitude/longitude_fitting_and_calculation_test_data_creator.ipynb
+        # Expected Longitude Output is generated in archival/tests/fixtures/longitude/longitude_fitting_and_calculation_test_data_creator.ipynb
         expected_output = -77.22534574490635
 
         actual_output = fit_longitude(

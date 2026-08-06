@@ -52,7 +52,7 @@ Standalone parameter estimation: `tilt_azimuth_study.py`, `latitude_study.py`, `
 
 - Version is managed via `setuptools_scm` — `_version.py` is auto-generated from git tags
 - Python 3.10–3.13 supported
-- `tests/fixtures/` contains archival Jupyter notebooks (from deprecated `dataio` module) — do not attempt to run
+- `archival/` contains non-functional artifacts retained for reference (fixture notebooks from the deprecated `dataio` module, a dev script depending on the removed `PVDBPlug`) — do not attempt to run
 - Docs are built with Sphinx + pydata-sphinx-theme + nbsphinx. Source in `docs/source/`, built to `docs/_build/html/`
 - Docker images for cloud Dask deployment are documented in `docker/README.md`. Pre-built image: `slacgismo/sdt-v1:latest`
 

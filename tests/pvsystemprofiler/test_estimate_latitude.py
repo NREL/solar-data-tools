@@ -24,7 +24,7 @@ class TestEstimateLatitude(unittest.TestCase):
         with open(delta_file_path) as file:
             delta = np.genfromtxt(file, delimiter=",")
 
-        # Expected Latitude Output is generated in tests/fixtures/latitude/latitude_test_data_creator.ipynb
+        # Expected Latitude Output is generated in archival/tests/fixtures/latitude/latitude_test_data_creator.ipynb
         expected_output = 38.58601372121755
 
         actual_output = estimate_latitude(hours_daylight, delta)
